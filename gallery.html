@@ -1,0 +1,1031 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Gallery - Car & Bike Care Garage | Our Work Portfolio</title>
+  <meta name="author" content="Car & Bike Care Garage">
+  <meta name="description" content="Browse our gallery of car and bike repair work at Car & Bike Care Garage, Brookefield, Bengaluru. See our quality workmanship in action.">
+  <meta name="keywords" content="car repair gallery, bike service photos, vehicle maintenance, Bengaluru garage, car care work">
+  <meta name="robots" content="INDEX,FOLLOW">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+  <link rel="manifest" href="assets/img/favicons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+  <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+  <link rel="stylesheet" href="assets/css/slick.min.css">
+  <link rel="stylesheet" href="assets/css/nice-select.min.css">
+  <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
+  <link rel="stylesheet" href="assets/css/twentytwenty.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* ===== Gallery Page Custom Styles ===== */
+    .gallery-section {
+      padding: 80px 0 100px;
+      background: #f8f9fa;
+    }
+
+    /* Filter Buttons */
+    .gallery-filter {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 50px;
+    }
+
+    .gallery-filter .filter-btn {
+      background: transparent;
+      border: 2px solid #e2e2e2;
+      padding: 10px 28px;
+      font-family: 'Dosis', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #333;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .gallery-filter .filter-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #e21a22 0%, #ff4444 100%);
+      transition: left 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      z-index: -1;
+    }
+
+    .gallery-filter .filter-btn:hover,
+    .gallery-filter .filter-btn.active {
+      color: #fff;
+      border-color: #e21a22;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(226, 26, 34, 0.3);
+    }
+
+    .gallery-filter .filter-btn:hover::before,
+    .gallery-filter .filter-btn.active::before {
+      left: 0;
+    }
+
+    /* Gallery Grid */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 1199px) {
+      .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 991px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 575px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+    }
+
+    /* Gallery Item */
+    .gallery-item {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #222;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .gallery-item.tall {
+      grid-row: span 2;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.4s ease;
+      min-height: 250px;
+    }
+
+    .gallery-item.tall img {
+      min-height: 520px;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.08);
+      filter: brightness(0.7);
+    }
+
+    /* Gallery Overlay */
+    .gallery-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 30px 25px;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      background: linear-gradient(180deg, transparent 0%, transparent 40%, rgba(0, 0, 0, 0.85) 100%);
+      z-index: 2;
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-overlay h4 {
+      color: #fff;
+      font-family: 'Dosis', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 5px;
+      transform: translateY(20px);
+      transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s;
+    }
+
+    .gallery-item:hover .gallery-overlay h4 {
+      transform: translateY(0);
+    }
+
+    .gallery-overlay span {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 14px;
+      font-weight: 500;
+      transform: translateY(20px);
+      transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) 0.15s;
+    }
+
+    .gallery-item:hover .gallery-overlay span {
+      transform: translateY(0);
+    }
+
+    /* Zoom Icon */
+    .gallery-zoom {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      width: 60px;
+      height: 60px;
+      background: rgba(226, 26, 34, 0.9);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 22px;
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s;
+      z-index: 3;
+      backdrop-filter: blur(10px);
+    }
+
+    .gallery-item:hover .gallery-zoom {
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    /* Stats Banner */
+    .gallery-stats {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      padding: 60px 0;
+      margin-top: 0;
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 20px 15px;
+    }
+
+    .stat-item .stat-number {
+      font-family: 'Dosis', sans-serif;
+      font-size: 48px;
+      font-weight: 800;
+      color: #e21a22;
+      display: block;
+      line-height: 1.2;
+    }
+
+    .stat-item .stat-label {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 16px;
+      font-weight: 500;
+      margin-top: 5px;
+    }
+
+    /* CTA Section */
+    .gallery-cta {
+      background: linear-gradient(135deg, #e21a22 0%, #c0101a 100%);
+      padding: 70px 0;
+      text-align: center;
+    }
+
+    .gallery-cta h2 {
+      color: #fff;
+      font-family: 'Dosis', sans-serif;
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .gallery-cta p {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 18px;
+      margin-bottom: 30px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .gallery-cta .vs-btn {
+      background: #fff;
+      color: #e21a22;
+      border-color: #fff;
+    }
+
+    .gallery-cta .vs-btn:hover {
+      background: #1a1a2e;
+      color: #fff;
+      border-color: #1a1a2e;
+    }
+
+    /* Animation Classes */
+    .gallery-item {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.6s forwards;
+    }
+
+    .gallery-item:nth-child(1) { animation-delay: 0.1s; }
+    .gallery-item:nth-child(2) { animation-delay: 0.15s; }
+    .gallery-item:nth-child(3) { animation-delay: 0.2s; }
+    .gallery-item:nth-child(4) { animation-delay: 0.25s; }
+    .gallery-item:nth-child(5) { animation-delay: 0.3s; }
+    .gallery-item:nth-child(6) { animation-delay: 0.35s; }
+    .gallery-item:nth-child(7) { animation-delay: 0.4s; }
+    .gallery-item:nth-child(8) { animation-delay: 0.45s; }
+    .gallery-item:nth-child(9) { animation-delay: 0.5s; }
+    .gallery-item:nth-child(10) { animation-delay: 0.55s; }
+    .gallery-item:nth-child(11) { animation-delay: 0.6s; }
+    .gallery-item:nth-child(12) { animation-delay: 0.65s; }
+    .gallery-item:nth-child(13) { animation-delay: 0.7s; }
+    .gallery-item:nth-child(14) { animation-delay: 0.75s; }
+    .gallery-item:nth-child(15) { animation-delay: 0.8s; }
+    .gallery-item:nth-child(16) { animation-delay: 0.85s; }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Gallery Introduction */
+    .gallery-intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 50px;
+    }
+
+    .gallery-intro p {
+      color: #666;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    /* Google Maps Link Banner */
+    .maps-banner {
+      background: #fff;
+      border: 2px solid #e8e8e8;
+      border-radius: 15px;
+      padding: 30px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 60px;
+      flex-wrap: wrap;
+      gap: 20px;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    }
+
+    .maps-banner:hover {
+      border-color: #e21a22;
+      box-shadow: 0 10px 40px rgba(226, 26, 34, 0.1);
+      transform: translateY(-3px);
+    }
+
+    .maps-banner-content {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .maps-banner-content i {
+      font-size: 40px;
+      color: #e21a22;
+    }
+
+    .maps-banner-content h5 {
+      font-family: 'Dosis', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 3px;
+      color: #222;
+    }
+
+    .maps-banner-content span {
+      color: #888;
+      font-size: 14px;
+    }
+
+    /* Hidden items for filtering */
+    .gallery-item.hide {
+      display: none;
+    }
+
+    .gallery-item.show {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="preloader">
+    <button class="vs-btn preloaderCls">Cancel Preloader</button>
+    <div class="preloader-inner">
+      <img src="assets/img/logo.png" alt="logo">
+      <span class="loader"></span>
+    </div>
+  </div>
+  <a href="https://wa.me/919845515813?text=Hello%20Car%20%26%20Bike%20Care%20Garage!" target="_blank" class="scrollToTop scroll-btn wa-btn"><i class="fab fa-whatsapp"></i></a>
+  <a href="#" class="scrollToTop scroll-btn"><i class="far fa-arrow-up"></i></a>
+
+  <!-- Mobile Menu -->
+  <div class="vs-menu-wrapper">
+    <div class="vs-menu-area text-center">
+      <div class="mobile-logo">
+        <a href="index.html"><img src="assets/img/logo.png" alt="Car & Bike Care Garage" class="logo"></a>
+        <button class="vs-menu-toggle"><i class="fal fa-times"></i></button>
+      </div>
+      <div class="vs-mobile-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sidemenu -->
+  <div class="sidemenu-wrapper d-none d-lg-block">
+    <div class="sidemenu-content">
+      <button class="closeButton sideMenuCls"><i class="far fa-times"></i></button>
+      <div class="widget">
+        <div class="vs-widget-about">
+          <div class="mb-4">
+            <a href="index.html"><img src="assets/img/logo.png" alt="Garix" class="logo"></a>
+          </div>
+          <p class="sidemenu-text">Intrinsicly evisculate emerging cutting edge scenarios redefine
+            future-proof
+            e-markets demand line</p>
+          <div class="social-style1 style2">
+            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="widget  ">
+        <h4 class="widget_title">Gallery Posts</h4>
+        <div class="sidebar-gallery">
+          <div class="gallery-thumb">
+            <img src="assets/img//footer/insta1.jpg" alt="Gallery Image" class="w-100">
+          </div>
+          <div class="gallery-thumb">
+            <img src="assets/img//footer/insta2.jpg" alt="Gallery Image" class="w-100">
+          </div>
+          <div class="gallery-thumb">
+            <img src="assets/img/footer/insta3.jpg" alt="Gallery Image" class="w-100">
+          </div>
+          <div class="gallery-thumb">
+            <img src="assets/img/footer/insta4.jpg" alt="Gallery Image" class="w-100">
+          </div>
+          <div class="gallery-thumb">
+            <img src="assets/img/footer/insta5.jpg" alt="Gallery Image" class="w-100">
+          </div>
+          <div class="gallery-thumb">
+            <img src="assets/img/footer/insta6.jpg" alt="Gallery Image" class="w-100">
+          </div>
+        </div>
+      </div>
+      <div class="widget  ">
+        <h3 class="widget_title">Office Maps</h3>
+        <div class="footer-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3245.16096574646!2d77.71761169999999!3d12.964302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae13150c33646b%3A0xbb270e1ae7843530!2sCar%20%26%20bike%20care%20garage!5e1!3m2!1sen!2sin!4v1774437125558!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="vs-header header-layout1">
+    <div class="sticky-wrapper header-bottom2">
+      <div class="sticky-active">
+        <div class="container">
+          <div class="menu-top">
+            <div class="row justify-content-between align-items-center gx-sm-0">
+              <div class="col-auto">
+                <div class="header-logo2">
+                  <a href="index.html"><img src="assets/img/logo.png" alt="Car & Bike Care Garage" class="logo"></a>
+                </div>
+              </div>
+              <div class="col-auto">
+                <nav class="main-menu menu-style2 d-none d-lg-block">
+                  <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="col-auto">
+                <div class="header-btns">
+                  <button class="vs-icon style2 sideMenuToggler d-none d-lg-inline-flex">
+                    <i class="far fa-bars"></i>
+                  </button>
+                  <button class="vs-menu-toggle style3 d-inline-block d-lg-none"><i class="fal fa-bars"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-none d-lg-block">
+      <div class="container">
+        <div class="row gx-0">
+          <div class="col-lg-4">
+            <div class="header-info style3">
+              <div class="header-info_icon"><i class="fas fa-clock"></i></div>
+              <div class="media-body">
+                <h6 class="header-info_title">We are open 7 days a week</h6>
+                <span class="header-info_label">09:30AM – 08:00PM</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="header-info style3 bg">
+              <div class="header-info_icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="media-body">
+                <p class="header-info_text">AECS Layout, Brookefield<br><strong>Bengaluru, Karnataka 560037</strong></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="header-info style3">
+              <div class="header-info_icon"><i class="fas fa-headphones-alt"></i></div>
+              <div class="media-body">
+                <h6 class="header-info_title">Call us anytime</h6>
+                <span class="header-info_label">+91 98455 15813</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="breadcumb-wrapper" data-bg-src="assets/img/bg/project-bg.jpg">
+    <div class="container z-index-common">
+      <div class="breadcumb-content">
+        <h1 class="breadcumb-title">Our Gallery</h1>
+        <div class="breadcumb-menu-wrap">
+          <ul class="breadcumb-menu">
+            <li><a href="index.html">Home</a></li>
+            <li>Gallery</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gallery Section -->
+  <section class="gallery-section">
+    <div class="container">
+      <!-- Gallery Introduction -->
+      <div class="gallery-intro">
+        <span class="sec-subtitle style4">Our Work Portfolio</span>
+        <h2 class="sec-title">See Our Expert Craftsmanship in Action</h2>
+        <p>Take a look at our workshop and the quality of work we deliver. Each photo showcases our commitment to excellence — from precision engine repairs to flawless body restorations.</p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="gallery-filter" id="galleryFilter">
+        <button class="filter-btn active" data-filter="all">All Work</button>
+        <button class="filter-btn" data-filter="engine">Engine & Parts</button>
+        <button class="filter-btn" data-filter="body">Body & Paint</button>
+        <button class="filter-btn" data-filter="service">Service & Maintenance</button>
+        <button class="filter-btn" data-filter="workshop">Workshop</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid" id="galleryGrid">
+
+        <!-- Item 1 - Engine Thermostat/Water Outlet -->
+        <div class="gallery-item tall" data-category="engine">
+          <a href="https://lh5.googleusercontent.com/p/AF1QipMHWnvjIe3hVfn0tVJ6UG9LJQsnjfxdfP_B7aJ_=s1600" class="popup-image">
+            <img src="https://lh5.googleusercontent.com/p/AF1QipMHWnvjIe3hVfn0tVJ6UG9LJQsnjfxdfP_B7aJ_=s800" alt="Engine Thermostat Housing Replacement" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Thermostat Replacement</h4>
+              <span>Engine & Parts</span>
+            </div>
+            <div class="gallery-zoom"><i class="fal fa-search-plus"></i></div>
+          </a>
+        </div>
+
+        <!-- Item 2 - Engine Parts -->
+        <div class="gallery-item" data-category="engine">
+          <a href="https://lh5.googleusercontent.com/p/AF1QipPyn-4slhy4EIwpGx-hscutbaLLkmICJ8y6HoHp=s1600" class="popup-image">
+            <img src="https://lh5.googleusercontent.com/p/AF1QipPyn-4slhy4EIwpGx-hscutbaLLkmICJ8y6HoHp=s800" alt="Engine Components Inspection" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Engine Components</h4>
+              <span>Engine & Parts</span>
+            </div>
+            <div class="gallery-zoom"><i class="fal fa-search-plus"></i></div>
+          </a>
+        </div>
+
+        <!-- Item 3 - Body Damage Repair -->
+        <div class="gallery-item" data-category="body">
+          <a href="https://lh5.googleusercontent.com/p/AF1QipOxBIfZlG_0-TZmOLlj4CYYH5MWTtOZjVCIpRu8=s1600" class="popup-image">
+            <img src="https://lh5.googleusercontent.com/p/AF1QipOxBIfZlG_0-TZmOLlj4CYYH5MWTtOZjVCIpRu8=s800" alt="Car Body Scratch Repair" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Scratch & Dent Repair</h4>
+              <span>Body & Paint</span>
+            </div>
+            <div class="gallery-zoom"><i class="fal fa-search-plus"></i></div>
+          </a>
+        </div>
+
+        <!-- Item 4 - Coolant Service -->
+        <div class="gallery-item" data-category="service">
+          <a href="https://lh5.googleusercontent.com/p/AF1QipMzuqfsdgk4CIlIT-AK1YJ5gv43fa5RmNAIsZfh=s1600" class="popup-image">
+            <img src="https://lh5.googleusercontent.com/p/AF1QipMzuqfsdgk4CIlIT-AK1YJ5gv43fa5RmNAIsZfh=s800" alt="Coolant Refill Service" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Coolant Service</h4>
+              <span>Service & Maintenance</span>
+            </div>
+            <div class="gallery-zoom"><i class="fal fa-search-plus"></i></div>
+          </a>
+        </div>
+
+        <!-- Item 5 - Throttle Body -->
+        <div class="gallery-item tall" data-category="engine">
+          <a href="https://lh5.googleusercontent.com/p/AF1QipMTawBHqE2ZesUA-JuXIw6mcXFk1-jka2h8i1Xg=s1600" class="popup-image">
+            <img src="https://lh5.googleusercontent.com/p/AF1QipMTawBHqE2ZesUA-JuXIw6mcXFk1-jka2h8i1Xg=s800" alt="Throttle Body Cleaning" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Throttle Body Service</h4>
+              <span>Engine & Parts</span>
+            </div>
+            <div class="gallery-zoom"><i class="fal fa-search-plus"></i></div>
+          </a>
+        </div>
+
+        <!-- Item 6 - Ignition Coil -->
+        <div class="gallery-item" data-category="engine">
+          <a href="https://lh5.googleusercontent.com/p/AF1QipOcJeS_Qn1TJFG4VZkVUpowBgKRlNHY7MfVzgXa=s1600" class="popup-image">
+            <img src="https://lh5.googleusercontent.com/p/AF1QipOcJeS_Qn1TJFG4VZkVUpowBgKRlNHY7MfVzgXa=s800" alt="Ignition Coil Inspection" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Ignition System Repair</h4>
+              <span>Engine & Parts</span>
+            </div>
+            <div class="gallery-zoom"><i class="fal fa-search-plus"></i></div>
+          </a>
+        </div>
+
+        <!-- Item 7 - Brake Service -->
+        <div class="gallery-item" data-category="service">
+          <a href="https://lh5.googleusercontent.com/p/AF1QipO5ofU-kHlyiI4vb0PE-ZxxhDlbpzkt4w6N9Rjk=s1600" class="popup-image">
+            <img src="https://lh5.googleusercontent.com/p/AF1QipO5ofU-kHlyiI4vb0PE-ZxxhDlbpzkt4w6N9Rjk=s800" alt="Brake Pad Replacement" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Brake Pad Service</h4>
+              <span>Service & Maintenance</span>
+            </div>
+            <div class="gallery-zoom"><i class="fal fa-search-plus"></i></div>
+          </a>
+        </div>
+
+        <!-- Item 8 - Car Repair Service (local) -->
+        <div class="gallery-item" data-category="service">
+          <a href="assets/img/service/service-1-1.jpg" class="popup-image">
+            <img src="assets/img/service/service-1-1.jpg" alt="Car Repair & Service" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Full Car Service</h4>
+              <span>Service & Maintenance</span>
+            </div>
+            <div class="gallery-zoom"><i class="fal fa-search-plus"></i></div>
+          </a>
+        </div>
+
+        <!-- Item 9 - Bike Service (local) -->
+        <div class="gallery-item tall" data-category="service">
+          <a href="assets/img/service/service-1-2.jpg" class="popup-image">
+            <img src="assets/img/service/service-1-2.jpg" alt="Bike Repair & Maintenance" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Bike Maintenance</h4>
+              <span>Service & Maintenance</span>
+            </div>
+            <div class="gallery-zoom"><i class="fal fa-search-plus"></i></div>
+          </a>
+        </div>
+
+        <!-- Item 10 - Suspension (local) -->
+        <div class="gallery-item" data-category="service">
+          <a href="assets/img/service/service-1-3.jpg" class="popup-image">
+            <img src="assets/img/service/service-1-3.jpg" alt="Suspension & Brake Repair" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Suspension Repair</h4>
+              <span>Service & Maintenance</span>
+            </div>
+            <div class="gallery-zoom"><i class="fal fa-search-plus"></i></div>
+          </a>
+        </div>
+
+        <!-- Item 11 - Workshop (local hero) -->
+        <div class="gallery-item" data-category="workshop">
+          <a href="assets/img/hero/thar.jpg" class="popup-image">
+            <img src="assets/img/hero/thar.jpg" alt="Workshop Overview - Thar Service" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Mahindra Thar Service</h4>
+              <span>Workshop</span>
+            </div>
+            <div class="gallery-zoom"><i class="fal fa-search-plus"></i></div>
+          </a>
+        </div>
+
+        <!-- Item 12 - Defender -->
+        <div class="gallery-item" data-category="workshop">
+          <a href="assets/img/hero/defender.jpg" class="popup-image">
+            <img src="assets/img/hero/defender.jpg" alt="Land Rover Defender Service" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Defender Service</h4>
+              <span>Workshop</span>
+            </div>
+            <div class="gallery-zoom"><i class="fal fa-search-plus"></i></div>
+          </a>
+        </div>
+
+        <!-- Item 13 - Headlight -->
+        <div class="gallery-item tall" data-category="body">
+          <a href="assets/img/hero/headlight.jpg" class="popup-image">
+            <img src="assets/img/hero/headlight.jpg" alt="Headlight Restoration" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Headlight Restoration</h4>
+              <span>Body & Paint</span>
+            </div>
+            <div class="gallery-zoom"><i class="fal fa-search-plus"></i></div>
+          </a>
+        </div>
+
+        <!-- Item 14 - Service Detail -->
+        <div class="gallery-item" data-category="workshop">
+          <a href="assets/img/service/service-d-1.jpg" class="popup-image">
+            <img src="assets/img/service/service-d-1.jpg" alt="Detailed Workshop View" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Workshop Detail</h4>
+              <span>Workshop</span>
+            </div>
+            <div class="gallery-zoom"><i class="fal fa-search-plus"></i></div>
+          </a>
+        </div>
+
+        <!-- Item 15 - About/Workshop -->
+        <div class="gallery-item" data-category="workshop">
+          <a href="assets/img/about/about-img-1-1.jpg" class="popup-image">
+            <img src="assets/img/about/about-img-1-1.jpg" alt="Car & Bike Care Garage Workshop" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Our Garage</h4>
+              <span>Workshop</span>
+            </div>
+            <div class="gallery-zoom"><i class="fal fa-search-plus"></i></div>
+          </a>
+        </div>
+
+        <!-- Item 16 - Service Detail 3 -->
+        <div class="gallery-item" data-category="body">
+          <a href="assets/img/service/service-d-3.jpg" class="popup-image">
+            <img src="assets/img/service/service-d-3.jpg" alt="Paint & Body Service" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Body Restoration</h4>
+              <span>Body & Paint</span>
+            </div>
+            <div class="gallery-zoom"><i class="fal fa-search-plus"></i></div>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Google Maps Link Banner -->
+      <div class="maps-banner">
+        <div class="maps-banner-content">
+          <i class="fas fa-images"></i>
+          <div>
+            <h5>View All 237+ Photos on Google Maps</h5>
+            <span>Browse our complete work portfolio with customer reviews</span>
+          </div>
+        </div>
+        <a href="https://www.google.com/maps/contrib/106053434982784328675/photos/@12.964302,77.7176117,17z" target="_blank" class="vs-btn">View on Google Maps <span class="vs-btn__bar"></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Banner -->
+  <div class="gallery-stats">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-6">
+          <div class="stat-item">
+            <span class="stat-number">237+</span>
+            <span class="stat-label">Photos Uploaded</span>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="stat-item">
+            <span class="stat-number">1250+</span>
+            <span class="stat-label">Vehicles Serviced</span>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="stat-item">
+            <span class="stat-number">10k+</span>
+            <span class="stat-label">Happy Customers</span>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="stat-item">
+            <span class="stat-number">5+</span>
+            <span class="stat-label">Years of Excellence</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA Section -->
+  <div class="gallery-cta">
+    <div class="container">
+      <h2>Need Expert Vehicle Service?</h2>
+      <p>Whether it's a routine checkup or a complex repair, our team is ready to help. Book your appointment today!</p>
+      <a href="contact.html" class="vs-btn">Book Appointment <span class="vs-btn__bar"></span></a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer--layout1 space-top z-index-common" data-bg-src="assets/img/about/about-img-1-1.jpg">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="footer-top">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-lg-3 mb-30">
+            <div class="footer-logo text-center d-block text-lg-start">
+              <a href="index.html"><img src="assets/img/logo.png" alt="Car & Bike Care Garage" class="logo"></a>
+            </div>
+          </div>
+          <div class="col-lg-6 mb-30">
+            <p class="footer-text">We provide reliable and affordable car & bike repair services in Brookefield, Bengaluru. Our expert mechanics ensure quality service, quick turnaround, and complete customer satisfaction for every vehicle.</p>
+          </div>
+          <div class="col-lg-3 mb-30">
+            <div class="social-style1 text-center text-lg-end">
+              <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://whatsapp.com/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+              <a href="https://google.com/" target="_blank"><i class="fab fa-google"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="widget-area2 space-extra-bottom">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-md-6 col-lg-3 col-xl-2">
+            <div class="widget widget_nav_menu footer-widget">
+              <h3 class="widget_title">Useful Links</h3>
+              <div class="menu-all-pages-container">
+                <ul class="menu">
+                  <li><a href="index.html"><i class="far fa-angle-right"></i> Home</a></li>
+                  <li><a href="about.html"><i class="far fa-angle-right"></i> About</a></li>
+                  <li><a href="services.html"><i class="far fa-angle-right"></i> Services</a></li>
+                  <li><a href="gallery.html"><i class="far fa-angle-right"></i> Gallery</a></li>
+                  <li><a href="contact.html"><i class="far fa-angle-right"></i> Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="widget footer-widget">
+              <h3 class="widget_title">Opening Hours</h3>
+              <div class="widget__schedule">
+                <table class="table table-borderless">
+                  <tr><td>Monday</td><td><span>: </span></td><td><span>09:30 AM – 08:00 PM</span></td></tr>
+                  <tr><td>Tuesday</td><td><span>: </span></td><td><span>09:30 AM – 08:00 PM</span></td></tr>
+                  <tr><td>Wednesday</td><td><span>: </span></td><td><span>09:30 AM – 08:00 PM</span></td></tr>
+                  <tr><td>Thursday</td><td><span>: </span></td><td><span>09:30 AM – 08:00 PM</span></td></tr>
+                  <tr><td>Friday</td><td><span>: </span></td><td><span>09:30 AM – 08:00 PM</span></td></tr>
+                  <tr><td>Saturday</td><td><span>: </span></td><td><span>09:30 AM – 08:00 PM</span></td></tr>
+                  <tr><td>Sunday</td><td><span>: </span></td><td><span>09:30 AM – 08:00 PM</span></td></tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="widget footer-widget">
+              <h3 class="widget_title">Contact Info</h3>
+              <div class="footer-communicate">
+                <ul>
+                  <li>
+                    <a class="footer-communicate__text" href="tel:+919845515813">
+                      <i class="fas fa-phone-alt"></i>
+                      <span class="link">+91 98455 15813</span>
+                    </a>
+                  </li>
+                  <li><a class="footer-communicate__text" href="mailto:info@carbikecaregarage.com"><i class="fas fa-envelope"></i>
+                      <span class="link">info@carbikecaregarage.com</span></a></li>
+                  <li>
+                    <div class="footer-communicate__text">
+                      <i class="fas fa-map-marker-alt"></i>
+                      <span>753, Main Road, AECS Layout – C Block Cross, Brookefield, Bengaluru, Karnataka – 560037</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <div class="widget footer-widget">
+              <h3 class="widget_title">Our Instagram</h3>
+              <div class="sidebar-gallery">
+                <a href="assets/img/footer/insta1.jpg" class="popup-image">
+                  <img src="assets/img/footer/insta1.jpg" alt="Gallery Image" class="w-100">
+                  <span class="gal-btn"><i class="fal fa-plus"></i></span>
+                </a>
+                <a href="assets/img/footer/insta2.jpg" class="popup-image"><img src="assets/img/footer/insta2.jpg" alt="Gallery Image" class="w-100">
+                  <span class="gal-btn"><i class="fal fa-plus"></i></span>
+                </a>
+                <a href="assets/img/footer/insta3.jpg" class="popup-image"><img src="assets/img/footer/insta3.jpg" alt="Gallery Image" class="w-100">
+                  <span class="gal-btn"><i class="fal fa-plus"></i></span>
+                </a>
+                <a href="assets/img/footer/insta4.jpg" class="popup-image"><img src="assets/img/footer/insta4.jpg" alt="Gallery Image" class="w-100">
+                  <span class="gal-btn"><i class="fal fa-plus"></i></span>
+                </a>
+                <a href="assets/img/footer/insta5.jpg" class="popup-image"><img src="assets/img/footer/insta5.jpg" alt="Gallery Image" class="w-100">
+                  <span class="gal-btn"><i class="fal fa-plus"></i></span>
+                </a>
+                <a href="assets/img/footer/insta6.jpg" class="popup-image"><img src="assets/img/footer/insta6.jpg" alt="Gallery Image" class="w-100">
+                  <span class="gal-btn"><i class="fal fa-plus"></i></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright-wrap">
+      <div class="container">
+        <p class="copyright-text">© 2026 Car & Bike Care Garage. All Rights Reserved. Designed by MR Tech Solutions</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/jquery-ui.min.js"></script>
+  <script src="assets/js/slick.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/wow.min.js"></script>
+  <script src="assets/js/jquery.magnific-popup.min.js"></script>
+  <script src="assets/js/jquery.nice-select.min.js"></script>
+  <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/js/isotope.pkgd.min.js"></script>
+  <script src="assets/js/jquery.twentytwenty.js"></script>
+  <script src="assets/js/jquery.event.move.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    // Gallery Filter Functionality
+    (function() {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const galleryItems = document.querySelectorAll('.gallery-item');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          // Update active state
+          filterBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+
+          const filterVal = this.getAttribute('data-filter');
+
+          galleryItems.forEach((item, index) => {
+            if (filterVal === 'all' || item.getAttribute('data-category') === filterVal) {
+              item.classList.remove('hide');
+              item.classList.add('show');
+              item.style.animation = 'none';
+              item.offsetHeight; // Trigger reflow
+              item.style.animation = `fadeInUp 0.5s ${index * 0.05}s forwards`;
+            } else {
+              item.classList.add('hide');
+              item.classList.remove('show');
+            }
+          });
+        });
+      });
+
+      // Lightbox for gallery images
+      if (typeof $.fn.magnificPopup !== 'undefined') {
+        $('.gallery-grid').magnificPopup({
+          delegate: '.gallery-item:not(.hide) .popup-image',
+          type: 'image',
+          gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [0, 1]
+          },
+          mainClass: 'mfp-fade',
+          removalDelay: 300,
+          callbacks: {
+            beforeOpen: function() {
+              this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
+            }
+          },
+          image: {
+            titleSrc: function(item) {
+              var overlay = item.el.find('.gallery-overlay');
+              var title = overlay.find('h4').text();
+              var cat = overlay.find('span').text();
+              return '<span class="mfp-title-text">' + title + '</span><small>' + cat + '</small>';
+            }
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+
+</html>
