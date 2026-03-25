@@ -195,6 +195,10 @@
   /*---------- 05. Scroll To Top ----------*/
   $(scrollToTopBtn).each(function () {
     $(this).on("click", function (e) {
+      // Don't intercept clicks on WhatsApp button
+      if ($(this).hasClass("wa-btn")) {
+        return true; // Let the default behavior (opening WhatsApp) happen
+      }
       e.preventDefault();
       console.log("scroll to top clicked");
       $("html, body").animate(
